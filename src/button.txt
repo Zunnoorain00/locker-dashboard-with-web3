@@ -1,0 +1,231 @@
+<Link
+          to={"/dashboard"}
+          className="button-shadow shadow p-3 mb-5 bg-white rounded"
+        >
+          <i class="fa-solid fa-house fa-lg"></i>Dashboard
+        </Link>
+        <Link
+          to={"/tokenlock"}
+          className="button-shadow shadow p-3 mb-5 bg-white rounded"
+        >
+          <i class="fa-solid fa-lock fa-lg"></i>Token Lock
+        </Link>
+        <Link
+          to={"/lptoken"}
+          className="button-shadow shadow p-3 mb-5 bg-white rounded"
+        >
+          <i class="fa-solid fa-lock fa-lg"></i> LP Token
+        </Link>
+
+
+
+
+
+<div className="col-md-12 shadow p-3 mb-5 bg-white rounded">
+      <div className="container-fluid my-5">
+        <div className="row">
+          <div className="col-md-6">
+            <div>
+              <h4 htmlFor="">Enter Token Address</h4>
+              <div className="fontuser">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  name="search"
+                  required
+                  className="lp-token-input"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*<div className="row my-5  mx-5">
+          <div className="col-md-4  mx-5">
+            <div className="shadow p-3 mb-5 bg-white rounded ">
+              <h3>Why Use Standard Locker </h3>
+              <ul
+                style={{
+                  listStyleType: "disc !important",
+                  paddingLeft: "1em !important",
+                  marginLeft: "1em",
+                  fontSize: "20px",
+                }}
+              >
+                <li
+                  style={{
+                    marginBottom: "5px",
+                  }}
+                >
+                  Best for Standard Tokens
+                </li>
+                <li
+                  style={{
+                    marginBottom: "5px",
+                  }}
+                >
+                  Simple and Easy to use!
+                </li>
+                <li
+                  style={{
+                    marginBottom: "5px",
+                  }}
+                >
+                  Lowest for Utility Based Tokens
+                </li>
+                <li
+                  style={{
+                    marginBottom: "5px",
+                  }}
+                >
+                  Token Vesting Available
+                </li>
+                <li
+                  style={{
+                    marginBottom: "5px",
+                  }}
+                >
+                  Certik Audited
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-md-6"></div>
+        </div>
+        <div className="row mx-5">
+          <div className="col-md-4 mx-5">
+            <div className="shadow p-3 mb-5 bg-white rounded d-flex flex-column justify-content-center align-items-center">
+              <h3>Fee</h3>
+              <p>0.3 REDLC</p>
+            </div>
+          </div>
+          <div className="col-md-6"></div>
+                </div>*/}
+        <div className="row my-5  mx-5">
+          <div className="col-md-4  mx-5">
+            <div className="shadow p-3 mb-5 bg-white rounded d-flex justify-content-center align-items-center">
+              <div>
+                <p>
+                  <b>Token Name :</b> REDLC Token
+                </p>
+                <p>
+                  <b>Token Supply : </b>REDLC Token
+                </p>
+                <p>
+                  <b>Token Supply :</b> 14520200000.000
+                </p>
+                <p>
+                  <b>Your Wallet Balance : </b>0 REDLC
+                </p>
+                <p>
+                  <b>Token You Will Lock :</b> 0 REDLC
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-6"></div>
+        </div>
+        <div className="row">
+          <div className="col-md-6">
+            <div>
+              <h4 htmlFor="">Enter the amount of the token you want to lock</h4>
+              <div className="fontuser">
+                <input
+                  type="text"
+                  placeholder="Ex.100"
+                  name="search"
+                  required
+                  className="lp-token-input"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row my-4">
+          <div className="col-md-4"></div>
+          <div className="col-md-4">
+            <div>
+              <h4 htmlFor="" className="text-center">
+                Token Vesting : <span style={{ color: "red" }}>Disbale</span>
+              </h4>
+              <div className="fontuser">
+                <input
+                  type="text"
+                  placeholder="OPEN TOKEN VESTING SETTINGS"
+                  name="search"
+                  required
+                  className="lp-token-input"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row my-4">
+          <div className="col-md-4">
+            <div>
+              <h4 htmlFor="" className="text-center">
+                Unlock Time
+              </h4>
+              <div className="fontuser">
+                <input
+                  type="text"
+                  placeholder="2022-02-21 02:56 PM"
+                  name="search"
+                  required
+                  className="lp-token-input"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div>
+              <h4 htmlFor="" className="text-center">
+                Logo URL
+              </h4>
+              <div className="fontuser">
+                <input
+                  type="text"
+                  placeholder="Must end with jpg. png or gif"
+                  name="search"
+                  required
+                  className="lp-token-input"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row my-4">
+          <div className="col-md-7">
+            <div>
+              <h4 htmlFor="" className="text-center">
+                Destination Address / Locker Address
+              </h4>
+              <div className="fontuser">
+                <input
+                  type="text"
+                  placeholder="0x121242311231231231231231312312445234"
+                  name="search"
+                  required
+                  className="lp-token-input"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div>
+              <div className="fontuser">
+                <button
+                  type="submit"
+                  placeholder="Submit"
+                  name="search"
+                  required
+                  className="lp-token-input"
+                >
+                  + Add New Verifier Owner
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid d-flex justify-content-evenly align-items-center"></div>
+    </div>

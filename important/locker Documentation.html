@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #ethdoc-viewer{
+            font-size: 0.8em;
+            padding: 1em;
+        }
+        #ethdoc-viewer .lead{
+            font-size: 1em;
+        }
+        #ethdoc-viewer table {
+            width: 50%;
+        }
+        #ethdoc-viewer hr {
+            margin: 0;
+            margin-bottom: 0.5rem;
+        }
+        #ethdoc-viewer p{
+            margin-bottom: 0.5rem;
+        }
+        body{background-color: #222336;font-family:sans-serif;}
+        h1,h2,h3,h4,h5,h6,p,table,tr,td{color: #fff;font-size: 16px;}
+        h1{font-size: 22px;}
+        hr{border-color: #1F1F31;opacity: 0.2;}
+        p{opacity: 0.5;font-weight: normal;}
+        table{border:1px solid #fff;text-align: left;border-collapse: collapse;}
+        table thead tr th{padding: 10px 5px; border:1px solid rgba(255,255,255,0.5);}
+        table tbody tr td{padding: 10px 5px; border:1px solid rgba(255,255,255,0.5);}
+    </style>
+  </head>
+  <body>
+
+    <style>
+        #ethdoc-viewer{
+            font-size: 0.8em;
+            padding: 1em;
+        }
+        #ethdoc-viewer .lead{
+            font-size: 1em;
+        }
+        #ethdoc-viewer table {
+            width: 50%;
+        }
+        #ethdoc-viewer hr {
+            margin: 0;
+            margin-bottom: 0.5rem;
+        }
+        #ethdoc-viewer p{
+            margin-bottom: 0.5rem;
+        }
+    </style>
+
+    <div id="ethdoc-viewer">
+    
+        
+    <h3>Mapper </h3>
+
+    
+
+    
+
+    <br />
+    <p><strong>Functions</strong></p>
+
+
+        
+          <hr>
+            <h6>constructor</h6>
+
+            <p>[object Object]</p>
+
+            <p>No parameters</p>
+                  
+            <p>Returns:</p>
+           
+            <p>No parameters</p>
+            
+
+          <hr>
+            <h6>addLockerDetail</h6>
+
+            <p>Saves detail of lockers against each owner address, only `Factory` can call this method to save data of lockers.</p>
+
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>lockerType</td>
+        <td>uint8</td>
+        <td>Type of Locker {Standard: 0, LP: 1, Reward: 2, Vesting:3}     </td>
+        </tr><tr>
+        <td>lockerAddr</td>
+        <td>address</td>
+        <td>Address of locker    </td>
+        </tr><tr>
+        <td>lockerOwners</td>
+        <td>address[]</td>
+        <td>Array of owners addresses    </td>
+        </tr>
+              </tbody>
+      </table>
+                  
+            <p>Returns:</p>
+           
+            <p>No parameters</p>
+            
+
+          <hr>
+            <h6>getCompleteAddressList</h6>
+
+            <p>Returns total number of lockers with pagination, e.g. if owner's lockers count increased in hundreds then {getCompletePaidList} divide returned data and display it on multiple pages .    </p>
+
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>page</td>
+        <td>uint256</td>
+        <td>Number of pages   </td>
+        </tr><tr>
+        <td>size</td>
+        <td>uint256</td>
+        <td>Total number of lockers addresses per page    </td>
+        </tr>
+              </tbody>
+      </table>
+                  
+            <p>Returns:</p>
+           
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>paginatedAddresses</td>
+        <td>address[]</td>
+        <td>Locker Addresses with pagination(in pages)     </td>
+        </tr>
+              </tbody>
+      </table>
+            
+
+          <hr>
+            <h6>getFactory</h6>
+
+            <p>Returns address of `Factory`.</p>
+
+            <p>No parameters</p>
+                  
+            <p>Returns:</p>
+           
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>_factoryAddr</td>
+        <td>address</td>
+        <td>Factory's address </td>
+        </tr>
+              </tbody>
+      </table>
+            
+
+          <hr>
+            <h6>getLockerDetail</h6>
+
+            <p>Returns the details of locker by passing locker address as argument.</p>
+
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>lockerAddr</td>
+        <td>address</td>
+        <td>Address of locker    </td>
+        </tr>
+              </tbody>
+      </table>
+                  
+            <p>Returns:</p>
+           
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>lockerType</td>
+        <td>uint8</td>
+        <td>Type of Locker {Standard: 0, LP: 1, Reward: 2, Vesting:3}    </td>
+        </tr><tr>
+        <td>user</td>
+        <td>address[]</td>
+        <td>Array of owners addresses    </td>
+        </tr>
+              </tbody>
+      </table>
+            
+
+          <hr>
+            <h6>initialize</h6>
+
+            <p>Sets the value for {Factory}. Factory address can be changed only by owners. setFactory, getFactory are name of two methods for changing values. </p>
+
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>_factoryAddr</td>
+        <td>address</td>
+        <td>Set address of Factory contract</td>
+        </tr>
+              </tbody>
+      </table>
+                  
+            <p>Returns:</p>
+           
+            <p>No parameters</p>
+            
+
+          <hr>
+            <h6>owner</h6>
+
+            <p>Returns the address of the current owner.</p>
+
+            <p>No parameters</p>
+                  
+            <p>Returns:</p>
+           
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td></td>
+        <td>address</td>
+        <td></td>
+        </tr>
+              </tbody>
+      </table>
+            
+
+          <hr>
+            <h6>proxiableUUID</h6>
+
+            <p>Implementation of the ERC1822 {proxiableUUID} function. This returns the storage slot used by the implementation. It is used to validate the implementation's compatibility when performing an upgrade. IMPORTANT: A proxy pointing at a proxiable contract should not be considered proxiable itself, because this risks bricking a proxy that upgrades to it, by delegating to itself until out of gas. Thus it is critical that this function revert if invoked through a proxy. This is guaranteed by the `notDelegated` modifier.</p>
+
+            <p>No parameters</p>
+                  
+            <p>Returns:</p>
+           
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td></td>
+        <td>bytes32</td>
+        <td></td>
+        </tr>
+              </tbody>
+      </table>
+            
+
+          <hr>
+            <h6>recentLockers</h6>
+
+            <p>To show last five created locker addresses.</p>
+
+            <p>No parameters</p>
+                  
+            <p>Returns:</p>
+           
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>addresses</td>
+        <td>address[]</td>
+        <td>Returns last five locker addresses </td>
+        </tr>
+              </tbody>
+      </table>
+            
+
+          <hr>
+            <h6>renounceOwnership</h6>
+
+            <p>Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.</p>
+
+            <p>No parameters</p>
+                  
+            <p>Returns:</p>
+           
+            <p>No parameters</p>
+            
+
+          <hr>
+            <h6>setFactory</h6>
+
+            <p>To change address of Mapper. Only Owner can change Factory address.</p>
+
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>_address</td>
+        <td>address</td>
+        <td>Address of Mapper.  </td>
+        </tr>
+              </tbody>
+      </table>
+                  
+            <p>Returns:</p>
+           
+            <p>No parameters</p>
+            
+
+          <hr>
+            <h6>totalLockers</h6>
+
+            <p>Returns total number of lockers.    </p>
+
+            <p>No parameters</p>
+                  
+            <p>Returns:</p>
+           
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>totalLocker</td>
+        <td>uint256</td>
+        <td>total number of lockers    </td>
+        </tr>
+              </tbody>
+      </table>
+            
+
+          <hr>
+            <h6>transferOwnership</h6>
+
+            <p>Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.</p>
+
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>newOwner</td>
+        <td>address</td>
+        <td></td>
+        </tr>
+              </tbody>
+      </table>
+                  
+            <p>Returns:</p>
+           
+            <p>No parameters</p>
+            
+
+          <hr>
+            <h6>upgradeTo</h6>
+
+            <p>Upgrade the implementation of the proxy to `newImplementation`. Calls {_authorizeUpgrade}. Emits an {Upgraded} event.</p>
+
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>newImplementation</td>
+        <td>address</td>
+        <td></td>
+        </tr>
+              </tbody>
+      </table>
+                  
+            <p>Returns:</p>
+           
+            <p>No parameters</p>
+            
+
+          <hr>
+            <h6>upgradeToAndCall</h6>
+
+            <p>Upgrade the implementation of the proxy to `newImplementation`, and subsequently execute the function call encoded in `data`. Calls {_authorizeUpgrade}. Emits an {Upgraded} event.</p>
+
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>newImplementation</td>
+        <td>address</td>
+        <td></td>
+        </tr><tr>
+        <td>data</td>
+        <td>bytes</td>
+        <td></td>
+        </tr>
+              </tbody>
+      </table>
+                  
+            <p>Returns:</p>
+           
+            <p>No parameters</p>
+            
+
+          <hr>
+            <h6>userLockerAddresses</h6>
+
+            <p>Returns all locker addresses of owner, by passing owner address as argument.</p>
+
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>lockerOwner</td>
+        <td>address</td>
+        <td>Address of locker's owner        </td>
+        </tr>
+              </tbody>
+      </table>
+                  
+            <p>Returns:</p>
+           
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>allAddresses</td>
+        <td>address[]</td>
+        <td>Returns Array of locker addresses    </td>
+        </tr>
+              </tbody>
+      </table>
+            
+
+          <hr>
+            <h6>usersTotalLocker</h6>
+
+            <p>Returns total number of lockers stored against owner address in `Mapper`.    </p>
+
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>_lockerOwner</td>
+        <td>address</td>
+        <td>Address of lockers owner    </td>
+        </tr>
+              </tbody>
+      </table>
+                  
+            <p>Returns:</p>
+           
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>totalLocker</td>
+        <td>uint256</td>
+        <td>total number of lockers    </td>
+        </tr>
+              </tbody>
+      </table>
+            
+    
+    </div>
+
+  </body>
+</html>

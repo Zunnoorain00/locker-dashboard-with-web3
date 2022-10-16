@@ -1,0 +1,43 @@
+{
+    "inputs": [
+        {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+        },
+        {
+            "internalType": "address[]",
+            "name": "lockerOwners",
+            "type": "address[]"
+        },
+        {
+            "internalType": "string",
+            "name": "imageUrl",
+            "type": "string"
+        },
+        {
+            "internalType": "uint256",
+            "name": "tokenAmount",
+            "type": "uint256"
+        },
+        {
+            "internalType": "uint32",
+            "name": "maxApproval",
+            "type": "uint32"
+        },
+        {
+            "internalType": "uint8",
+            "name": "lockerType",
+            "type": "uint8"
+        },
+        {
+            "internalType": "uint256",
+            "name": "time",
+            "type": "uint256"
+        }
+    ],
+    "name": "createLocker",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+}
